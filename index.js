@@ -28,4 +28,4 @@ app.post("/trip", auth, addTrip)
 app.delete("/trip/:id", auth, deleteTrip)
 
 
-app.listen(8000, ()=>{console.log("----------AppStarted-----------");})
+app.listen(3000, ()=>{console.log("----------AppStarted-----------");})

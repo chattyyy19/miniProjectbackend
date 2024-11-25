@@ -1,5 +1,4 @@
 var jwt = require('jsonwebtoken');
-const { jwtkey } = require('../../config');
 
 async function auth(req, res, next){
 
@@ -7,7 +6,7 @@ async function auth(req, res, next){
 
         let token = req.headers.token;
         if(token){
-            isValid = jwt.verify(token, jwtkey)
+            isValid = jwt.verify(token, "helloWorld")
             if(isValid){
                 req.tokenData = isValid;
                 next();

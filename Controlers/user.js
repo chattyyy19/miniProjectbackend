@@ -2,7 +2,6 @@ var validator = require('validator');
 const user = require('../Models/user');
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
-const { jwtkey } = require('../config');
 const saltRounds = 10;
 
 async function verifyUser(req, res) {
@@ -22,7 +21,7 @@ async function verifyUser(req, res) {
                     phone: currUser.phone,
                     name: currUser.name
                 },
-                    jwtkey,
+                    "helloWorld",
                     {
                         expiresIn: '2 days'
                     }
