@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 connector();
 
-
 console.log("hello")
 app.post('/verify', verify)
 app.post("/login", verifyUser)
